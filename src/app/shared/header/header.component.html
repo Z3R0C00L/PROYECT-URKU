@@ -1,0 +1,47 @@
+<!--AE-CONTAINER-FLUID: margen auto en L && R
+AE-CONTAINER-FLUID-FULL: estable ancho maximo y quita padding en L && R
+RK-HEADER: posicion realtiva y color de fondo-->
+<header class="ae-container-fluid ae-container-fluid--full rk-header">
+  <!--RK-MOBILE-MENU: display none
+  +LABEL: transition,point & animation-->
+
+  <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+  <label for="mobile-menu">
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+    </label>
+    <!--RK-TOPBAR: maquetacion-->
+    <div class="ae-container-fluid rk-topbar">
+      <!--RK-LOGO: tamañoLetra,centrado & mayuscula-->
+      <h1 class="rk-logo"><a routerLink='home'>{{_infoPagina.info.titulo}}<sup>tm</sup></a></h1>
+      <!--RK-NAVIGATION: alineacionXbaseline,alineacion & display: none-->
+      <nav class="rk-navigation">
+          <!--RK-MENU: display:flex,list-style:none,tamañoLetra & padding margin: 0-->
+          <ul class="rk-menu">
+              <!--ACTIVE: color
+              RK-MENU_ITEM: addPadding, color & hereda display
+              RK-MENU__LINK: addPadding-bottom-->
+              <li routerLinkActive="active" class="rk-menu__item"><a routerLink='home' class="rk-menu__link">Home</a>
+              </li>
+              <li routerLinkActive="active" class="rk-menu__item"><a routerLink='about' class="rk-menu__link">Acerca</a>
+              </li>
+          </ul>
+          <!--RK-SEARCH: add margin-padding,position & display-->
+          <div class="rk-search">
+              <input type="text" (keyup.enter)="Buscar(txtBuscar.value)" placeholder="Search" id="urku-search" #txtBuscar class="rk-search-field">
+              <label for="urku-search">
+                <svg>
+                  <use xlink:href="assets/img/symbols.svg#icon-search"></use>
+                </svg>
+              </label>
+          </div>
+      </nav>
+    </div>
+</header>

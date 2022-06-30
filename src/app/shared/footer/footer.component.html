@@ -1,0 +1,41 @@
+<!--RK-FOOTER: addmargin top & bottom-->
+<footer class="ae-container-fluid rk-footer ">
+    <!--AE-GRID: display flex,wrap y margin en L & R
+    AE-GRID--COLLAPSE: quita margen en L & R-->
+    <div class="ae-grid ae-grid--collapse">
+        <!--AE-GRID__ITEM: position,padding L&R y maxWidth
+        au-xs-ta-center: text align-center
+        au-lg-ta-left: min-width: text align-left-->
+      <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
+        <!--RK-FOOTER-MENU: display inline-block & margin-bottom-->
+        <ul class="rk-menu rk-footer-menu">
+          <li class="rk-menu__item"><a routerLink='about' class="rk-menu__link">Acerca</a>
+          </li>
+          <li class="rk-menu__item"><a routerLink='contact' class="rk-menu__link">Contacto</a>
+          </li>
+        </ul>
+        <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">{{anio}} URKU PORTFOLIO </span>All Right Reserved.</p>
+      </div>
+      <div class="ae-grid__item item-lg-4 au-xs-ta-center"><a target="_blank" href="{{_infoPagina.info.facebook}}" class="rk-social-btn ">
+          <svg>
+            <use xlink:href="assets/img/symbols.svg#icon-facebook"></use>
+          </svg></a><a target="_blank" href="{{_infoPagina.info.twitter}}" class="rk-social-btn ">
+          <svg>
+            <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
+          </svg></a><a target="_blank" href="{{_infoPagina.info.instagram}}" class="rk-social-btn ">
+          <svg>
+            <use xlink:href="assets/img/symbols.svg#icon-pinterest"></use>
+          </svg></a><a target="_blank" href="{{_infoPagina.info.tublr}}" class="rk-social-btn ">
+          <svg>
+            <use xlink:href="assets/img/symbols.svg#icon-tumblr"></use>
+          </svg></a></div>
+      <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
+        <p class="rk-footer__text rk-footer__contact "> 
+          <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> 
+            <a href="mailTo:{{_infoPagina.info.email}}" class="rk-dark-color ">{{_infoPagina.info.email}} </a>
+          </span>
+        </p>
+        <p class="rk-footer__text rk-footer__by">Theme by <a href="http://pixeden.com" class="ae-u-bolder">Pixeden.</a></p>
+      </div>
+    </div>
+  </footer>
